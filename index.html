@@ -229,8 +229,27 @@
       .badge{font-size:11px;padding:7px 12px}
     }
   </style>
+  <link rel="stylesheet" href="nav.css">
 </head>
 <body>
+<header class="sk-nav">
+  <div class="sk-nav-inner">
+    <a class="sk-nav-logo" href="index.html">SideKick<span>Studioss</span></a>
+    <nav class="sk-nav-links">
+      <a href="product.html">Product</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="industries.html">Industries</a>
+    </nav>
+    <a class="sk-nav-cta" href="https://app.sidekickstudioss.com/">Sign In</a>
+    <button class="sk-nav-toggle" onclick="this.closest('.sk-nav').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+  </div>
+  <div class="sk-nav-mobile">
+    <a href="product.html">Product</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="industries.html">Industries</a>
+    <a href="https://app.sidekickstudioss.com/">Sign In &rarr;</a>
+  </div>
+</header>
 <div class="skp-root">
   <div class="skp-glow"></div>
   <div class="skp-bg-lines"></div>
@@ -242,8 +261,8 @@
       <h1 class="hero-h1 reveal d1">The Marketing System<br><span class="grad">Built For Winners</span></h1>
       <p class="hero-sub reveal d2">Launch proven ads, automate follow-up, and manage your leads &mdash; all from a done-for-you system designed for service businesses.</p>
       <div class="hero-actions reveal d3">
-        <a class="btn btn-primary" href="https://www.sidekickstudioss.com/pricing">Start Free Trial &rarr;</a>
-        <a class="btn btn-ghost" href="https://www.sidekickstudioss.com/product">See How It Works</a>
+        <a class="btn btn-primary" href="pricing.html">Start Free Trial &rarr;</a>
+        <a class="btn btn-ghost" href="product.html">See How It Works</a>
       </div>
       <div class="hero-trust reveal d4">
         <span class="trust-pill">&#10003; Precise Ads</span>
@@ -324,7 +343,7 @@
       </div>
     </div>
     <div style="text-align:center;margin-top:28px;">
-      <a href="https://www.sidekickstudioss.com/company" class="view-all-btn reveal">View All Industries &rarr;</a>
+      <a href="industries.html" class="view-all-btn reveal">View All Industries &rarr;</a>
     </div>
   </section>
 
@@ -499,7 +518,7 @@
           <p>Launch ads. Automate follow-up. Manage your leads. All from one done-for-you system built to scale.</p>
           <div class="cta-actions">
             <a class="btn btn-primary" href="https://buy.stripe.com/eVqaEX9LE7Wbcgz7uP4wM03">Start Free Trial &rarr;</a>
-            <a class="btn btn-ghost" href="https://www.sidekickstudioss.com/pricing">View Pricing</a>
+            <a class="btn btn-ghost" href="pricing.html">View Pricing</a>
           </div>
           <div class="cta-fine">Credit card required &middot; Cancel anytime &middot; contact@sidekickstudioss.net</div>
         </div>
@@ -507,6 +526,19 @@
     </div>
   </section>
 </div>
+
+<footer class="sk-footer">
+  <div class="sk-footer-inner">
+    <a class="sk-footer-logo" href="index.html">SideKick<span>Studioss</span></a>
+    <nav class="sk-footer-links">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="industries.html">Industries</a>
+    </nav>
+    <p class="sk-footer-copy">&copy; 2025 SideKick Studioss &middot; <a href="mailto:contact@sidekickstudioss.net">contact@sidekickstudioss.net</a></p>
+  </div>
+</footer>
 
 <script>
 (function() {
