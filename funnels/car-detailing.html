@@ -1,45 +1,26 @@
 <!--
-  SideKick Studioss — Re-coded embeddable funnel
-  Updated to match requested sk2 style with 10-day free trial + stronger offer
+  SideKick Studioss — Car Detailing Funnel v2
+  Plug-and-play focused, detailer-specific copy
 -->
 
 <style>
   html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    min-height: 100% !important;
+    margin: 0 !important; padding: 0 !important;
+    width: 100% !important; min-height: 100% !important;
     background: transparent !important;
-    border: 0 !important;
-    outline: 0 !important;
-    overflow-x: hidden !important;
+    border: 0 !important; outline: 0 !important; overflow-x: hidden !important;
   }
-
-  body {
-    display: block;
-  }
-
-  iframe {
-    border: 0 !important;
-  }
+  body { display: block; }
+  iframe { border: 0 !important; }
 
   .sk2-root {
-    --sk2-bg: #0b0b13;
-    --sk2-bg-soft: #11111c;
-    --sk2-card: rgba(255,255,255,0.06);
-    --sk2-card-2: rgba(255,255,255,0.08);
-    --sk2-border: rgba(255,255,255,0.10);
-    --sk2-text: #f5f7ff;
-    --sk2-text-soft: rgba(245,247,255,0.72);
-    --sk2-text-faint: rgba(245,247,255,0.48);
-    --sk2-purple: #8b5cf6;
-    --sk2-purple-2: #7c3aed;
-    --sk2-purple-3: #c4b5fd;
-    --sk2-green: #22c55e;
-    --sk2-yellow: #f59e0b;
-    --sk2-red: #ef4444;
-    --sk2-radius: 22px;
-    --sk2-radius-sm: 14px;
+    --sk2-bg: #0b0b13; --sk2-bg-soft: #11111c;
+    --sk2-card: rgba(255,255,255,0.06); --sk2-card-2: rgba(255,255,255,0.08);
+    --sk2-border: rgba(255,255,255,0.10); --sk2-text: #f5f7ff;
+    --sk2-text-soft: rgba(245,247,255,0.72); --sk2-text-faint: rgba(245,247,255,0.48);
+    --sk2-purple: #8b5cf6; --sk2-purple-2: #7c3aed; --sk2-purple-3: #c4b5fd;
+    --sk2-green: #22c55e; --sk2-yellow: #f59e0b; --sk2-red: #ef4444;
+    --sk2-radius: 22px; --sk2-radius-sm: 14px;
     --sk2-shadow: 0 18px 60px rgba(0,0,0,0.35);
     font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: var(--sk2-text);
@@ -47,1194 +28,388 @@
       radial-gradient(circle at 20% 0%, rgba(139,92,246,0.22), transparent 28%),
       radial-gradient(circle at 90% 10%, rgba(124,58,237,0.16), transparent 24%),
       linear-gradient(180deg, #0a0912 0%, #0e0d18 40%, #0a0912 100%);
-    overflow: hidden;
-    position: relative;
-    display: block;
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    outline: 0 !important;
-    box-shadow: none !important;
+    overflow: hidden; position: relative; display: block;
+    width: 100%; min-height: 100vh;
+    margin: 0 !important; padding: 0 !important;
+    border: 0 !important; outline: 0 !important; box-shadow: none !important;
   }
-
   .sk2-root * { box-sizing: border-box; }
   .sk2-wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
   .sk2-section { padding: 96px 0; position: relative; }
   .sk2-grid { display: grid; gap: 24px; }
   .sk2-center { text-align: center; }
-
-  .sk2-glow {
-    position: absolute;
-    pointer-events: none;
-    inset: 0;
+  .sk2-glow { position: absolute; pointer-events: none; inset: 0; }
+  .sk2-glow::before, .sk2-glow::after {
+    content: ""; position: absolute; width: 520px; height: 520px;
+    border-radius: 50%; filter: blur(90px); opacity: 0.18;
   }
-
-  .sk2-glow::before,
-  .sk2-glow::after {
-    content: "";
-    position: absolute;
-    width: 520px;
-    height: 520px;
-    border-radius: 50%;
-    filter: blur(90px);
-    opacity: 0.18;
-  }
-
-  .sk2-glow::before {
-    background: var(--sk2-purple);
-    top: -120px;
-    left: -140px;
-  }
-
-  .sk2-glow::after {
-    background: #4f46e5;
-    right: -140px;
-    top: 220px;
-  }
-
+  .sk2-glow::before { background: var(--sk2-purple); top: -120px; left: -140px; }
+  .sk2-glow::after { background: #4f46e5; right: -140px; top: 220px; }
   .sk2-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 14px;
-    border-radius: 999px;
-    background: rgba(139,92,246,0.12);
-    border: 1px solid rgba(196,181,253,0.18);
-    color: var(--sk2-purple-3);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    backdrop-filter: blur(12px);
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 14px; border-radius: 999px;
+    background: rgba(139,92,246,0.12); border: 1px solid rgba(196,181,253,0.18);
+    color: var(--sk2-purple-3); font-size: 12px; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase; backdrop-filter: blur(12px);
   }
-
   .sk2-badge-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #a78bfa;
-    box-shadow: 0 0 0 0 rgba(167,139,250,0.7);
-    animation: sk2Pulse 1.8s infinite;
+    width: 8px; height: 8px; border-radius: 50%; background: #a78bfa;
+    box-shadow: 0 0 0 0 rgba(167,139,250,0.7); animation: sk2Pulse 1.8s infinite;
   }
-
   @keyframes sk2Pulse {
     0% { box-shadow: 0 0 0 0 rgba(167,139,250,0.55); }
     70% { box-shadow: 0 0 0 12px rgba(167,139,250,0); }
     100% { box-shadow: 0 0 0 0 rgba(167,139,250,0); }
   }
-
   .sk2-title {
-    font-size: clamp(40px, 7vw, 72px);
-    line-height: 0.98;
-    letter-spacing: -0.05em;
-    margin: 18px 0 18px;
-    font-weight: 900;
+    font-size: clamp(40px, 7vw, 72px); line-height: 0.98;
+    letter-spacing: -0.05em; margin: 18px 0 18px; font-weight: 900;
   }
-
   .sk2-title .sk2-gradient {
     background: linear-gradient(135deg, #ffffff 0%, #d8ccff 40%, #8b5cf6 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
   }
-
   .sk2-sub {
-    max-width: 760px;
-    margin: 0 auto;
-    font-size: clamp(16px, 2vw, 20px);
-    line-height: 1.65;
-    color: var(--sk2-text-soft);
+    max-width: 680px; margin: 0 auto;
+    font-size: clamp(16px, 2vw, 19px); line-height: 1.65; color: var(--sk2-text-soft);
   }
-
-  .sk2-hero {
-    padding: 110px 0 72px;
-  }
-
+  .sk2-hero { padding: 110px 0 72px; }
   .sk2-trial-banner {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 24px;
-    padding: 10px 16px;
-    border-radius: 999px;
-    background: rgba(34,197,94,0.10);
-    border: 1px solid rgba(34,197,94,0.18);
-    color: #b7f7ca;
-    font-size: 13px;
-    font-weight: 700;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: inline-flex; align-items: center; gap: 10px; margin-top: 24px;
+    padding: 10px 16px; border-radius: 999px;
+    background: rgba(34,197,94,0.10); border: 1px solid rgba(34,197,94,0.18);
+    color: #b7f7ca; font-size: 13px; font-weight: 700;
+    flex-wrap: wrap; justify-content: center;
   }
-
-  .sk2-trial-banner strong {
-    color: #ffffff;
-  }
-
+  .sk2-trial-banner strong { color: #ffffff; }
   .sk2-hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-top: 34px;
+    display: flex; justify-content: center; gap: 14px;
+    flex-wrap: wrap; margin-top: 34px;
   }
-
   .sk2-btn {
-    appearance: none;
-    border: 0;
-    border-radius: 999px;
-    padding: 15px 24px;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
+    appearance: none; border: 0; border-radius: 999px;
+    padding: 15px 26px; font-size: 15px; font-weight: 700;
+    text-decoration: none; display: inline-flex; align-items: center;
+    justify-content: center; gap: 10px;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
     cursor: pointer;
   }
-
   .sk2-btn-primary {
     color: white;
     background: linear-gradient(135deg, var(--sk2-purple) 0%, var(--sk2-purple-2) 100%);
     box-shadow: 0 14px 40px rgba(124,58,237,0.36);
   }
-
-  .sk2-btn-primary:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 18px 50px rgba(124,58,237,0.48);
-  }
-
+  .sk2-btn-primary:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 18px 50px rgba(124,58,237,0.48); }
   .sk2-btn-secondary {
-    color: var(--sk2-text);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.14);
-    backdrop-filter: blur(12px);
+    color: var(--sk2-text); background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14); backdrop-filter: blur(12px);
   }
-
-  .sk2-btn-secondary:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255,255,255,0.28);
-    background: rgba(255,255,255,0.09);
-  }
-
+  .sk2-btn-secondary:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.28); background: rgba(255,255,255,0.09); }
   .sk2-mini-proof {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 18px;
-    color: var(--sk2-text-faint);
-    font-size: 13px;
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 18px; color: var(--sk2-text-faint); font-size: 13px;
   }
-
   .sk2-pill {
-    padding: 9px 12px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    padding: 9px 13px; border-radius: 999px;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
   }
-
-  .sk2-hero-note {
-    margin-top: 14px;
-    color: var(--sk2-text-faint);
-    font-size: 13px;
-  }
-
-  .sk2-hero-visual {
-    margin-top: 48px;
-    position: relative;
-  }
-
+  .sk2-hero-visual { margin-top: 52px; position: relative; }
   .sk2-browser {
-    position: relative;
-    border-radius: 28px;
-    overflow: hidden;
+    position: relative; border-radius: 28px; overflow: hidden;
     border: 1px solid rgba(255,255,255,0.10);
     background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-    box-shadow: var(--sk2-shadow);
-    backdrop-filter: blur(14px);
+    box-shadow: var(--sk2-shadow); backdrop-filter: blur(14px);
   }
-
   .sk2-browser-top {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 18px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    background: rgba(255,255,255,0.03);
+    display: flex; align-items: center; gap: 10px; padding: 14px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03);
   }
-
-  .sk2-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-  }
-
-  .sk2-dot.red { background: #ff5f57; }
-  .sk2-dot.yellow { background: #febb2e; }
-  .sk2-dot.green { background: #28c840; }
-
+  .sk2-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .sk2-dot.red { background: #ff5f57; } .sk2-dot.yellow { background: #febb2e; } .sk2-dot.green { background: #28c840; }
   .sk2-url {
-    margin-left: 8px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.05);
-    color: var(--sk2-text-faint);
-    font-size: 12px;
-    border: 1px solid rgba(255,255,255,0.07);
+    margin-left: 8px; padding: 8px 12px; border-radius: 999px;
+    background: rgba(255,255,255,0.05); color: var(--sk2-text-faint);
+    font-size: 12px; border: 1px solid rgba(255,255,255,0.07);
   }
-
-  .sk2-browser-body {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    min-height: 520px;
-  }
-
+  .sk2-browser-body { display: grid; grid-template-columns: 250px 1fr; min-height: 520px; }
   .sk2-side {
-    padding: 22px 18px;
-    border-right: 1px solid rgba(255,255,255,0.08);
+    padding: 22px 18px; border-right: 1px solid rgba(255,255,255,0.08);
     background: rgba(255,255,255,0.03);
   }
-
-  .sk2-logo {
-    margin-bottom: 18px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .sk2-logo strong {
-    display: block;
-    font-size: 15px;
-    margin-bottom: 4px;
-  }
-
-  .sk2-logo span {
-    font-size: 12px;
-    color: var(--sk2-text-faint);
-  }
-
-  .sk2-nav {
-    display: grid;
-    gap: 10px;
-  }
-
+  .sk2-logo { margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .sk2-logo strong { display: block; font-size: 15px; margin-bottom: 4px; }
+  .sk2-logo span { font-size: 12px; color: var(--sk2-text-faint); }
+  .sk2-nav { display: grid; gap: 10px; }
   .sk2-nav-item {
-    padding: 12px 14px;
-    border-radius: 14px;
-    color: var(--sk2-text-soft);
-    background: transparent;
-    border: 1px solid transparent;
-    font-size: 14px;
-    position: relative;
-    overflow: hidden;
+    padding: 12px 14px; border-radius: 14px; color: var(--sk2-text-soft);
+    background: transparent; border: 1px solid transparent; font-size: 14px;
   }
-
   .sk2-nav-item.active {
     color: #fff;
     background: linear-gradient(135deg, rgba(139,92,246,0.26), rgba(124,58,237,0.14));
     border-color: rgba(167,139,250,0.25);
   }
-
-  .sk2-main {
-    padding: 24px;
-  }
-
+  .sk2-main { padding: 24px; }
   .sk2-main-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    margin-bottom: 18px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 18px; margin-bottom: 18px;
   }
-
-  .sk2-main-title {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-  }
-
+  .sk2-main-title { font-size: 22px; font-weight: 800; letter-spacing: -0.03em; }
   .sk2-live {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 12px;
-    border-radius: 999px;
-    background: rgba(34,197,94,0.10);
-    color: #9df2b2;
-    border: 1px solid rgba(34,197,94,0.18);
-    font-size: 12px;
-    font-weight: 700;
+    display: inline-flex; align-items: center; gap: 8px; padding: 10px 12px;
+    border-radius: 999px; background: rgba(34,197,94,0.10); color: #9df2b2;
+    border: 1px solid rgba(34,197,94,0.18); font-size: 12px; font-weight: 700;
   }
-
-  .sk2-live-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--sk2-green);
-    animation: sk2Blink 1.4s infinite;
-  }
-
-  @keyframes sk2Blink {
-    0%,100% { opacity: 1; }
-    50% { opacity: .35; }
-  }
-
-  .sk2-kpis {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
-    margin-bottom: 16px;
-  }
-
-  .sk2-kpi {
-    padding: 16px;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .sk2-kpi-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .12em;
-    color: var(--sk2-text-faint);
-    margin-bottom: 8px;
-  }
-
-  .sk2-kpi-value {
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-  }
-
-  .sk2-kpi-trend {
-    margin-top: 8px;
-    color: #9df2b2;
-    font-size: 12px;
-    font-weight: 700;
-  }
-
-  .sk2-panels {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: 14px;
-  }
-
-  .sk2-panel {
-    border-radius: 22px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 18px;
-  }
-
-  .sk2-panel-title {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .12em;
-    color: var(--sk2-text-faint);
-    margin-bottom: 16px;
-    font-weight: 700;
-  }
-
-  .sk2-bars {
-    height: 180px;
-    display: flex;
-    align-items: end;
-    gap: 10px;
-  }
-
+  .sk2-live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sk2-green); animation: sk2Blink 1.4s infinite; }
+  @keyframes sk2Blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+  .sk2-kpis { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; margin-bottom: 16px; }
+  .sk2-kpi { padding: 16px; border-radius: 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
+  .sk2-kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: var(--sk2-text-faint); margin-bottom: 8px; }
+  .sk2-kpi-value { font-size: 24px; font-weight: 800; letter-spacing: -0.04em; }
+  .sk2-kpi-trend { margin-top: 8px; color: #9df2b2; font-size: 12px; font-weight: 700; }
+  .sk2-panels { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; }
+  .sk2-panel { border-radius: 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 18px; }
+  .sk2-panel-title { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--sk2-text-faint); margin-bottom: 16px; font-weight: 700; }
+  .sk2-bars { height: 180px; display: flex; align-items: end; gap: 10px; }
   .sk2-bar {
-    flex: 1;
-    border-radius: 12px 12px 6px 6px;
+    flex: 1; border-radius: 12px 12px 6px 6px;
     background: linear-gradient(180deg, #b69cff 0%, #8b5cf6 60%, #6d28d9 100%);
-    min-height: 18px;
-    position: relative;
-    transform-origin: bottom;
-    animation: sk2Rise 1.2s ease forwards;
-    opacity: .92;
+    min-height: 18px; transform-origin: bottom;
+    animation: sk2Rise 1.2s ease forwards; opacity: .92;
   }
-
-  .sk2-bar:nth-child(2){ animation-delay: .06s; }
-  .sk2-bar:nth-child(3){ animation-delay: .12s; }
-  .sk2-bar:nth-child(4){ animation-delay: .18s; }
-  .sk2-bar:nth-child(5){ animation-delay: .24s; }
-  .sk2-bar:nth-child(6){ animation-delay: .30s; }
-  .sk2-bar:nth-child(7){ animation-delay: .36s; }
-  .sk2-bar:nth-child(8){ animation-delay: .42s; }
-
-  @keyframes sk2Rise {
-    from { transform: scaleY(.15); opacity: .25; }
-    to { transform: scaleY(1); opacity: .92; }
-  }
-
-  .sk2-leads-list {
-    display: grid;
-    gap: 12px;
-  }
-
+  .sk2-bar:nth-child(2){animation-delay:.06s} .sk2-bar:nth-child(3){animation-delay:.12s}
+  .sk2-bar:nth-child(4){animation-delay:.18s} .sk2-bar:nth-child(5){animation-delay:.24s}
+  .sk2-bar:nth-child(6){animation-delay:.30s} .sk2-bar:nth-child(7){animation-delay:.36s}
+  .sk2-bar:nth-child(8){animation-delay:.42s}
+  @keyframes sk2Rise { from{transform:scaleY(.15);opacity:.25} to{transform:scaleY(1);opacity:.92} }
+  .sk2-leads-list { display: grid; gap: 12px; }
   .sk2-lead-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    padding: 14px;
-    border-radius: 16px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.07);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 12px; padding: 14px; border-radius: 16px;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
   }
-
-  .sk2-lead-row strong { font-size: 14px; }
+  .sk2-lead-row strong { font-size: 13px; display: block; }
   .sk2-lead-row span { color: var(--sk2-text-faint); font-size: 12px; }
-
   .sk2-tag {
-    padding: 7px 10px;
-    border-radius: 999px;
-    font-size: 11px;
-    font-weight: 700;
-    background: rgba(139,92,246,0.14);
-    color: #d7c8ff;
-    border: 1px solid rgba(167,139,250,0.18);
+    padding: 7px 10px; border-radius: 999px; font-size: 11px; font-weight: 700;
+    background: rgba(139,92,246,0.14); color: #d7c8ff;
+    border: 1px solid rgba(167,139,250,0.18); white-space: nowrap;
   }
-
   .sk2-float-card {
-    position: absolute;
-    right: -18px;
-    bottom: 26px;
-    width: 220px;
-    padding: 16px;
-    border-radius: 18px;
-    background: rgba(12,12,21,0.84);
-    border: 1px solid rgba(255,255,255,0.10);
-    box-shadow: 0 20px 50px rgba(0,0,0,.35);
-    backdrop-filter: blur(14px);
-    animation: sk2Float 4.2s ease-in-out infinite;
+    position: absolute; right: -18px; bottom: 26px; width: 220px;
+    padding: 16px; border-radius: 18px; background: rgba(12,12,21,0.84);
+    border: 1px solid rgba(255,255,255,0.10); box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    backdrop-filter: blur(14px); animation: sk2Float 4.2s ease-in-out infinite;
   }
-
-  @keyframes sk2Float {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-
-  .sk2-float-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: var(--sk2-text-soft);
-  }
-
-  .sk2-float-number {
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: -.05em;
-  }
-
-  .sk2-float-note {
-    color: #9df2b2;
-    font-size: 12px;
-    font-weight: 700;
-  }
-
-  .sk2-problem-strip {
-    margin-top: 24px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-  }
-
+  @keyframes sk2Float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  .sk2-float-top { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 10px; font-size: 12px; color: var(--sk2-text-soft); }
+  .sk2-float-number { font-size: 28px; font-weight: 900; letter-spacing: -.05em; }
+  .sk2-float-note { color: #9df2b2; font-size: 12px; font-weight: 700; }
+  .sk2-problem-strip { margin-top: 28px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
   .sk2-problem {
-    padding: 16px 18px;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: var(--sk2-text-soft);
-    font-size: 14px;
-    text-align: left;
+    padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08); color: var(--sk2-text-soft);
+    font-size: 14px; text-align: left;
   }
-
-  .sk2-problem strong {
-    display: block;
-    color: white;
-    margin-bottom: 6px;
-    font-size: 15px;
-  }
-
-  .sk2-section-head {
-    max-width: 760px;
-    margin: 0 auto 40px;
-    text-align: center;
-  }
-
-  .sk2-label {
-    font-size: 12px;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--sk2-purple-3);
-    font-weight: 800;
-    margin-bottom: 12px;
-  }
-
-  .sk2-h2 {
-    font-size: clamp(30px, 4vw, 52px);
-    line-height: 1.05;
-    letter-spacing: -0.045em;
-    margin: 0 0 14px;
-    font-weight: 900;
-  }
-
-  .sk2-body {
-    color: var(--sk2-text-soft);
-    font-size: 17px;
-    line-height: 1.65;
-  }
-
-  .sk2-sticky-wrap {
-    display: grid;
-    grid-template-columns: .95fr 1.05fr;
-    gap: 24px;
-    align-items: start;
-  }
-
+  .sk2-problem strong { display: block; color: white; margin-bottom: 6px; font-size: 15px; }
+  .sk2-section-head { max-width: 760px; margin: 0 auto 40px; text-align: center; }
+  .sk2-label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--sk2-purple-3); font-weight: 800; margin-bottom: 12px; }
+  .sk2-h2 { font-size: clamp(30px,4vw,52px); line-height: 1.05; letter-spacing: -0.045em; margin: 0 0 14px; font-weight: 900; }
+  .sk2-body { color: var(--sk2-text-soft); font-size: 17px; line-height: 1.65; }
+  .sk2-sticky-wrap { display: grid; grid-template-columns: .95fr 1.05fr; gap: 24px; align-items: start; }
   .sk2-sticky-card {
-    position: sticky;
-    top: 30px;
-    padding: 28px;
-    border-radius: 28px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
-    border: 1px solid rgba(255,255,255,0.10);
-    box-shadow: var(--sk2-shadow);
+    position: sticky; top: 30px; padding: 28px; border-radius: 28px;
+    background: linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.10); box-shadow: var(--sk2-shadow);
   }
-
-  .sk2-sticky-card h3 {
-    font-size: 28px;
-    line-height: 1.05;
-    margin: 0 0 14px;
-    letter-spacing: -0.04em;
-  }
-
-  .sk2-sticky-card p {
-    color: var(--sk2-text-soft);
-    line-height: 1.7;
-    margin: 0 0 18px;
-  }
-
-  .sk2-stat-list {
-    display: grid;
-    gap: 10px;
-  }
-
+  .sk2-sticky-card h3 { font-size: 26px; line-height: 1.1; margin: 0 0 14px; letter-spacing: -0.04em; }
+  .sk2-sticky-card p { color: var(--sk2-text-soft); line-height: 1.7; margin: 0 0 18px; font-size: 15px; }
+  .sk2-stat-list { display: grid; gap: 10px; }
   .sk2-stat-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 14px;
-    border-radius: 16px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.07);
-    color: var(--sk2-text-soft);
-    font-size: 14px;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 14px; border-radius: 16px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.07);
+    color: var(--sk2-text-soft); font-size: 14px;
   }
-
   .sk2-stat-row strong { color: #fff; }
-
-  .sk2-steps {
-    display: grid;
-    gap: 18px;
-  }
-
+  .sk2-steps { display: grid; gap: 18px; }
   .sk2-step {
-    position: relative;
-    padding: 22px 22px 22px 88px;
-    border-radius: 24px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    overflow: hidden;
+    position: relative; padding: 22px 22px 22px 88px; border-radius: 24px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); overflow: hidden;
+    transition: border-color .25s ease, transform .25s ease;
   }
-
+  .sk2-step:hover { border-color: rgba(196,181,253,0.22); transform: translateY(-2px); }
   .sk2-step::after {
-    content: "";
-    position: absolute;
-    inset: auto -30px -30px auto;
-    width: 140px;
-    height: 140px;
-    background: radial-gradient(circle, rgba(139,92,246,0.18), transparent 68%);
+    content: ""; position: absolute; inset: auto -30px -30px auto;
+    width: 140px; height: 140px;
+    background: radial-gradient(circle,rgba(139,92,246,0.18),transparent 68%);
   }
-
   .sk2-step-num {
-    position: absolute;
-    left: 22px;
-    top: 22px;
-    width: 48px;
-    height: 48px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, var(--sk2-purple), var(--sk2-purple-2));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 900;
-    box-shadow: 0 12px 30px rgba(124,58,237,.35);
+    position: absolute; left: 22px; top: 22px; width: 48px; height: 48px;
+    border-radius: 16px; background: linear-gradient(135deg,var(--sk2-purple),var(--sk2-purple-2));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 900; box-shadow: 0 12px 30px rgba(124,58,237,.35);
   }
-
-  .sk2-step h3 {
-    margin: 0 0 8px;
-    font-size: 21px;
-    letter-spacing: -0.03em;
-  }
-
-  .sk2-step p {
-    margin: 0;
-    color: var(--sk2-text-soft);
-    line-height: 1.65;
-    font-size: 15px;
-  }
-
-  .sk2-step-chips {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 14px;
-  }
-
+  .sk2-step h3 { margin: 0 0 8px; font-size: 20px; letter-spacing: -0.03em; }
+  .sk2-step p { margin: 0; color: var(--sk2-text-soft); line-height: 1.65; font-size: 15px; }
+  .sk2-step-chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
   .sk2-chip {
-    padding: 8px 10px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: #ddd6fe;
-    font-size: 12px;
-    font-weight: 700;
+    padding: 8px 10px; border-radius: 999px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    color: #ddd6fe; font-size: 12px; font-weight: 700;
   }
-
-  .sk2-feature-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 16px;
-  }
-
+  .sk2-feature-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
   .sk2-feature {
-    padding: 22px;
-    border-radius: 24px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    min-height: 220px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .sk2-feature:hover {
-    transform: translateY(-3px);
+    padding: 24px; border-radius: 24px; background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08); position: relative; overflow: hidden;
     transition: transform .25s ease, border-color .25s ease;
-    border-color: rgba(196,181,253,0.22);
   }
-
+  .sk2-feature:hover { transform: translateY(-4px); border-color: rgba(196,181,253,0.22); }
   .sk2-feature-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, rgba(139,92,246,0.26), rgba(124,58,237,0.16));
+    width: 52px; height: 52px; border-radius: 16px;
+    background: linear-gradient(135deg,rgba(139,92,246,0.26),rgba(124,58,237,0.16));
     border: 1px solid rgba(167,139,250,0.2);
-    display: grid;
-    place-items: center;
-    margin-bottom: 16px;
-    font-size: 22px;
+    display: grid; place-items: center; margin-bottom: 16px; font-size: 22px;
   }
-
-  .sk2-feature h3 {
-    font-size: 21px;
-    margin: 0 0 8px;
-    letter-spacing: -.03em;
-  }
-
-  .sk2-feature p {
-    margin: 0;
-    color: var(--sk2-text-soft);
-    line-height: 1.65;
-    font-size: 15px;
-  }
-
+  .sk2-feature h3 { font-size: 20px; margin: 0 0 10px; letter-spacing: -.03em; }
+  .sk2-feature p { margin: 0; color: var(--sk2-text-soft); line-height: 1.65; font-size: 15px; }
   .sk2-mini-ui {
-    margin-top: 18px;
-    padding: 14px;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    display: grid;
-    gap: 10px;
+    margin-top: 18px; padding: 14px; border-radius: 18px;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    display: grid; gap: 10px;
   }
-
-  .sk2-ui-row {
-    height: 10px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.08);
-    overflow: hidden;
-    position: relative;
-  }
-
+  .sk2-ui-row { height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; position: relative; }
   .sk2-ui-row::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: var(--w, 70%);
+    content: ""; position: absolute; inset: 0; width: var(--w,70%);
     border-radius: inherit;
-    background: linear-gradient(90deg, rgba(196,181,253,.9), rgba(139,92,246,.9));
+    background: linear-gradient(90deg,rgba(196,181,253,.9),rgba(139,92,246,.9));
   }
-
-  .sk2-marquee {
-    display: flex;
-    gap: 14px;
-    overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent, #fff 10%, #fff 90%, transparent);
-  }
-
-  .sk2-marquee-track {
-    display: flex;
-    gap: 14px;
-    min-width: max-content;
-    animation: sk2Scroll 22s linear infinite;
-  }
-
-  @keyframes sk2Scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
+  .sk2-marquee { display: flex; gap: 14px; overflow: hidden; mask-image: linear-gradient(90deg,transparent,#fff 10%,#fff 90%,transparent); }
+  .sk2-marquee-track { display: flex; gap: 14px; min-width: max-content; animation: sk2Scroll 24s linear infinite; }
+  @keyframes sk2Scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
   .sk2-marquee-card {
-    min-width: 240px;
-    padding: 18px 20px;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: var(--sk2-text-soft);
-    font-size: 14px;
+    min-width: 260px; padding: 18px 20px; border-radius: 18px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    color: var(--sk2-text-soft); font-size: 14px; line-height: 1.55;
   }
-
-  .sk2-marquee-card strong {
-    display: block;
-    color: white;
-    margin-bottom: 6px;
-  }
-
-  .sk2-cta {
-    padding: 90px 0 110px;
-  }
-
+  .sk2-marquee-card strong { display: block; color: white; margin-bottom: 6px; font-size: 15px; }
+  .sk2-cta { padding: 90px 0 110px; }
   .sk2-cta-card {
-    position: relative;
-    overflow: hidden;
-    padding: 40px;
-    border-radius: 34px;
+    position: relative; overflow: hidden; padding: 52px 48px; border-radius: 34px; text-align: center;
     background:
       radial-gradient(circle at top right, rgba(196,181,253,0.16), transparent 30%),
-      linear-gradient(135deg, rgba(139,92,246,0.20) 0%, rgba(124,58,237,0.10) 45%, rgba(255,255,255,0.04) 100%);
-    border: 1px solid rgba(196,181,253,0.16);
-    box-shadow: var(--sk2-shadow);
-    text-align: center;
+      linear-gradient(135deg,rgba(139,92,246,0.20) 0%,rgba(124,58,237,0.10) 45%,rgba(255,255,255,0.04) 100%);
+    border: 1px solid rgba(196,181,253,0.16); box-shadow: var(--sk2-shadow);
   }
-
-  .sk2-price-stack {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin: 18px 0 18px;
-  }
-
-  .sk2-price-stack strong {
-    font-size: clamp(42px, 7vw, 72px);
-    line-height: 1;
-    letter-spacing: -.06em;
-  }
-
-  .sk2-price-stack .sk2-price-top {
-    color: #b7f7ca;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-  }
-
-  .sk2-price-stack .sk2-price-bottom {
-    color: var(--sk2-text-soft);
-    font-size: 18px;
-    font-weight: 700;
-  }
-
-  .sk2-price-stack .sk2-price-bottom span {
-    color: #fff;
-  }
-
-  .sk2-checks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 18px 0 28px;
-  }
-
+  .sk2-price-stack { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; margin: 20px 0; }
+  .sk2-price-stack strong { font-size: clamp(52px,8vw,80px); line-height: 1; letter-spacing: -.06em; }
+  .sk2-price-top { color: #b7f7ca; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .10em; }
+  .sk2-price-bottom { color: var(--sk2-text-soft); font-size: 17px; font-weight: 600; }
+  .sk2-price-bottom span { color: #fff; font-weight: 700; }
+  .sk2-checks { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0 30px; }
   .sk2-check {
-    padding: 10px 12px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: var(--sk2-text-soft);
-    font-size: 13px;
-    font-weight: 600;
+    padding: 10px 14px; border-radius: 999px;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10);
+    color: var(--sk2-text-soft); font-size: 13px; font-weight: 600;
   }
+  .sk2-reveal { opacity:0; transform:translateY(28px) scale(.98); transition:opacity .7s ease,transform .7s ease; will-change:transform,opacity; }
+  .sk2-reveal.sk2-visible { opacity:1; transform:translateY(0) scale(1); }
+  .sk2-delay-1{transition-delay:.08s} .sk2-delay-2{transition-delay:.16s}
+  .sk2-delay-3{transition-delay:.24s} .sk2-delay-4{transition-delay:.32s}
 
-  .sk2-reveal {
-    opacity: 0;
-    transform: translateY(28px) scale(.98);
-    transition: opacity .7s ease, transform .7s ease;
-    will-change: transform, opacity;
+  @media(max-width:980px){
+    .sk2-section{padding:72px 0}
+    .sk2-browser-body,.sk2-sticky-wrap,.sk2-feature-grid,.sk2-panels{grid-template-columns:1fr}
+    .sk2-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .sk2-side{display:none}
+    .sk2-float-card{position:static;width:100%;margin-top:14px;animation:none}
+    .sk2-sticky-card{position:relative;top:0}
+    .sk2-wrap{padding:0 20px}
   }
-
-  .sk2-reveal.sk2-visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+  @media(max-width:700px){
+    .sk2-root{min-height:auto}
+    .sk2-wrap{padding:0 16px}
+    .sk2-section{padding:56px 0}
+    .sk2-hero{padding:72px 0 48px}
+    .sk2-title{font-size:clamp(34px,12vw,48px);line-height:1.02;margin:14px 0}
+    .sk2-sub{font-size:15px;max-width:100%}
+    .sk2-hero-actions{flex-direction:column;align-items:stretch;gap:10px;margin-top:24px}
+    .sk2-btn{width:100%;padding:15px 18px}
+    .sk2-mini-proof{gap:8px;margin-top:14px}
+    .sk2-pill{font-size:12px;padding:8px 10px}
+    .sk2-kpis{grid-template-columns:1fr 1fr;gap:10px}
+    .sk2-kpi{padding:12px;border-radius:16px}
+    .sk2-kpi-value{font-size:20px}
+    .sk2-panels{gap:10px}
+    .sk2-panel{padding:14px;border-radius:16px}
+    .sk2-bars{height:110px;gap:7px}
+    .sk2-lead-row{padding:12px;flex-direction:column;gap:8px}
+    .sk2-problem-strip{grid-template-columns:1fr;gap:10px;margin-top:18px}
+    .sk2-h2{font-size:clamp(26px,9vw,34px);margin-bottom:12px}
+    .sk2-body{font-size:15px}
+    .sk2-marquee{mask-image:none;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .sk2-marquee::-webkit-scrollbar{display:none}
+    .sk2-marquee-track{animation:none;padding-right:8px}
+    .sk2-step{padding:76px 16px 16px}
+    .sk2-step-num{left:16px;top:16px;width:42px;height:42px;font-size:16px}
+    .sk2-step h3{font-size:18px}
+    .sk2-step p{font-size:14px}
+    .sk2-feature-grid{grid-template-columns:1fr;gap:12px}
+    .sk2-feature{padding:18px;border-radius:18px}
+    .sk2-cta{padding:56px 0 72px}
+    .sk2-cta-card{padding:28px 20px;border-radius:24px}
+    .sk2-price-stack strong{font-size:clamp(46px,14vw,62px)}
+    .sk2-checks{gap:8px;margin:16px 0 24px}
+    .sk2-check{font-size:12px;padding:9px 11px}
+    .sk2-sticky-card{padding:20px;border-radius:20px}
+    .sk2-sticky-card h3{font-size:22px}
+    .sk2-steps{gap:12px}
   }
-
-  .sk2-delay-1 { transition-delay: .08s; }
-  .sk2-delay-2 { transition-delay: .16s; }
-  .sk2-delay-3 { transition-delay: .24s; }
-  .sk2-delay-4 { transition-delay: .32s; }
-
-  @media (max-width: 980px) {
-    .sk2-section { padding: 84px 0; }
-    .sk2-browser-body,
-    .sk2-sticky-wrap,
-    .sk2-feature-grid,
-    .sk2-panels { grid-template-columns: 1fr; }
-    .sk2-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .sk2-side { display: none; }
-    .sk2-float-card {
-      position: static;
-      width: 100%;
-      margin-top: 14px;
-      animation: none;
-      right: auto;
-      bottom: auto;
-    }
-    .sk2-sticky-card { position: relative; top: 0; }
-    .sk2-wrap { padding: 0 20px; }
-  }
-
-  @media (max-width: 700px) {
-    .sk2-root { min-height: auto; }
-    .sk2-wrap { padding: 0 16px; }
-    .sk2-section { padding: 64px 0; }
-    .sk2-hero { padding: 72px 0 48px; }
-    .sk2-title {
-      font-size: clamp(34px, 12vw, 46px);
-      line-height: 1.02;
-      margin: 16px 0 14px;
-    }
-    .sk2-sub {
-      font-size: 15px;
-      line-height: 1.65;
-      max-width: 100%;
-    }
-    .sk2-badge {
-      font-size: 11px;
-      padding: 7px 12px;
-      gap: 8px;
-    }
-    .sk2-trial-banner {
-      font-size: 12px;
-      padding: 10px 14px;
-    }
-    .sk2-hero-actions {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 10px;
-      margin-top: 26px;
-    }
-    .sk2-btn {
-      width: 100%;
-      padding: 15px 18px;
-      font-size: 15px;
-    }
-    .sk2-mini-proof {
-      gap: 8px;
-      justify-content: center;
-      margin-top: 14px;
-    }
-    .sk2-pill {
-      font-size: 12px;
-      padding: 8px 10px;
-    }
-    .sk2-hero-visual { margin-top: 30px; }
-    .sk2-browser {
-      border-radius: 22px;
-      overflow: hidden;
-    }
-    .sk2-browser-top {
-      padding: 12px 14px;
-      gap: 8px;
-    }
-    .sk2-url {
-      font-size: 11px;
-      padding: 7px 10px;
-      max-width: 70%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .sk2-main { padding: 14px; }
-    .sk2-main-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-    .sk2-main-title { font-size: 18px; }
-    .sk2-live { font-size: 11px; padding: 8px 10px; }
-    .sk2-kpis {
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .sk2-kpi {
-      padding: 12px;
-      border-radius: 16px;
-    }
-    .sk2-kpi-label {
-      font-size: 10px;
-      margin-bottom: 6px;
-    }
-    .sk2-kpi-value {
-      font-size: 20px;
-      line-height: 1;
-    }
-    .sk2-kpi-trend { font-size: 11px; margin-top: 6px; }
-    .sk2-panels { gap: 10px; }
-    .sk2-panel {
-      padding: 14px;
-      border-radius: 18px;
-    }
-    .sk2-panel-title {
-      font-size: 11px;
-      margin-bottom: 12px;
-    }
-    .sk2-bars {
-      height: 120px;
-      gap: 7px;
-    }
-    .sk2-leads-list { gap: 10px; }
-    .sk2-lead-row {
-      padding: 12px;
-      border-radius: 14px;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .sk2-lead-row strong { font-size: 13px; }
-    .sk2-tag { font-size: 10px; }
-    .sk2-float-card {
-      padding: 14px;
-      border-radius: 16px;
-    }
-    .sk2-float-number { font-size: 24px; }
-    .sk2-problem-strip {
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 16px;
-    }
-    .sk2-problem {
-      padding: 14px 15px;
-      border-radius: 15px;
-      font-size: 13px;
-    }
-    .sk2-section-head {
-      margin: 0 auto 28px;
-    }
-    .sk2-label {
-      font-size: 11px;
-      margin-bottom: 10px;
-    }
-    .sk2-h2 {
-      font-size: clamp(26px, 9vw, 34px);
-      line-height: 1.05;
-      margin-bottom: 12px;
-    }
-    .sk2-body {
-      font-size: 15px;
-      line-height: 1.65;
-    }
-    .sk2-marquee {
-      mask-image: none;
-      overflow-x: auto;
-      overflow-y: hidden;
-      padding-bottom: 4px;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-    .sk2-marquee::-webkit-scrollbar { display: none; }
-    .sk2-marquee-track {
-      animation: none;
-      padding-right: 8px;
-    }
-    .sk2-marquee-card {
-      min-width: 220px;
-      padding: 16px;
-      border-radius: 16px;
-      font-size: 13px;
-    }
-    .sk2-sticky-wrap { gap: 16px; }
-    .sk2-sticky-card {
-      padding: 20px;
-      border-radius: 22px;
-    }
-    .sk2-sticky-card h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    .sk2-stat-list { gap: 8px; }
-    .sk2-stat-row {
-      padding: 11px 12px;
-      border-radius: 14px;
-      font-size: 13px;
-    }
-    .sk2-steps { gap: 12px; }
-    .sk2-step {
-      padding: 76px 16px 16px 16px;
-      border-radius: 18px;
-    }
-    .sk2-step-num {
-      left: 16px;
-      top: 16px;
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      font-size: 16px;
-    }
-    .sk2-step h3 {
-      font-size: 18px;
-      margin-bottom: 7px;
-      line-height: 1.15;
-    }
-    .sk2-step p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .sk2-step-chips {
-      gap: 8px;
-      margin-top: 12px;
-    }
-    .sk2-chip {
-      font-size: 11px;
-      padding: 7px 9px;
-    }
-    .sk2-feature-grid {
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    .sk2-feature {
-      min-height: 0;
-      padding: 18px;
-      border-radius: 18px;
-    }
-    .sk2-feature-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      margin-bottom: 14px;
-      font-size: 20px;
-    }
-    .sk2-feature h3 {
-      font-size: 18px;
-      margin-bottom: 7px;
-    }
-    .sk2-feature p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    .sk2-mini-ui {
-      margin-top: 14px;
-      padding: 12px;
-      border-radius: 14px;
-      gap: 8px;
-    }
-    .sk2-ui-row { height: 8px; }
-    .sk2-cta {
-      padding: 64px 0 78px;
-    }
-    .sk2-cta-card {
-      padding: 26px 18px;
-      border-radius: 24px;
-    }
-    .sk2-price-stack {
-      margin: 14px 0 14px;
-      gap: 4px;
-    }
-    .sk2-price-stack strong {
-      font-size: clamp(38px, 14vw, 54px);
-    }
-    .sk2-price-stack .sk2-price-bottom {
-      font-size: 16px;
-    }
-    .sk2-checks {
-      gap: 8px;
-      margin: 14px 0 22px;
-    }
-    .sk2-check {
-      font-size: 12px;
-      padding: 9px 10px;
-    }
-  }
-
-  @media (max-width: 420px) {
-    .sk2-wrap { padding: 0 14px; }
-    .sk2-title { font-size: 32px; }
-    .sk2-h2 { font-size: 24px; }
-    .sk2-kpis { grid-template-columns: 1fr; }
-    .sk2-kpi-value { font-size: 22px; }
-    .sk2-main { padding: 12px; }
-    .sk2-btn { font-size: 14px; }
-    .sk2-marquee-card { min-width: 200px; }
+  @media(max-width:420px){
+    .sk2-wrap{padding:0 14px}
+    .sk2-title{font-size:32px}
+    .sk2-h2{font-size:24px}
+    .sk2-kpis{grid-template-columns:1fr 1fr}
+    .sk2-btn{font-size:14px}
   }
 </style>
-
 <div class="sk2-root" id="sk2-funnel">
   <div class="sk2-glow"></div>
 
+  <!-- HERO -->
   <section class="sk2-hero sk2-section">
     <div class="sk2-wrap sk2-center">
       <div class="sk2-badge sk2-reveal">
         <span class="sk2-badge-dot"></span>
-        Launch ads in minutes. Get leads automatically.
+        Built for car detailers
       </div>
 
       <h1 class="sk2-title sk2-reveal sk2-delay-1">
-        Launch proven ads.<br>
-        <span class="sk2-gradient">Capture more leads.</span><br>
-        Follow up automatically.
+        Your ads are already built.<br>
+        <span class="sk2-gradient">Just launch them.</span>
       </h1>
 
       <p class="sk2-sub sk2-reveal sk2-delay-2">
-        SideKick Studioss gives you prebuilt ad templates, fast launch tools, and automatic follow-up so your marketing finally feels simple instead of random.
+        SideKick Studioss gives car detailers prebuilt ad templates, a connected landing page, and automated follow-up — all done for you. Pick your city, set your budget, hit launch.
       </p>
 
       <div class="sk2-trial-banner sk2-reveal sk2-delay-2">
         <strong>10 days free</strong>
-        <span>Launch your first campaign risk-free</span>
+        <span>·</span>
+        <span>No credit card games. Cancel anytime.</span>
       </div>
 
       <div class="sk2-hero-actions sk2-reveal sk2-delay-3">
-        <a class="sk2-btn sk2-btn-primary" href="https://www.sidekickstudioss.com/pricing">Start Getting Leads — Free</a>
+        <a class="sk2-btn sk2-btn-primary" href="https://www.sidekickstudioss.com/pricing">Start Free Trial — 10 Days On Us</a>
         <a class="sk2-btn sk2-btn-secondary" href="#sk2-how">See How It Works</a>
       </div>
 
       <div class="sk2-mini-proof sk2-reveal sk2-delay-4">
-        <span class="sk2-pill">Launch same day</span>
-        <span class="sk2-pill">No agency needed</span>
-        <span class="sk2-pill">Built-in follow-up</span>
+        <span class="sk2-pill">✓ Plug-and-play ad templates</span>
+        <span class="sk2-pill">✓ Done-for-you setup</span>
+        <span class="sk2-pill">✓ Automated follow-up</span>
+        <span class="sk2-pill">✓ $39/month</span>
       </div>
-
-      <div class="sk2-hero-note sk2-reveal sk2-delay-4">No setup. No agency. You own everything.</div>
 
       <div class="sk2-hero-visual sk2-reveal sk2-delay-4">
         <div class="sk2-browser">
@@ -1244,7 +419,6 @@
             <span class="sk2-dot green"></span>
             <span class="sk2-url">app.sidekickstudioss.com</span>
           </div>
-
           <div class="sk2-browser-body">
             <aside class="sk2-side">
               <div class="sk2-logo">
@@ -1255,43 +429,22 @@
                 <div class="sk2-nav-item active">Dashboard</div>
                 <div class="sk2-nav-item">Launch Campaigns</div>
                 <div class="sk2-nav-item">Templates</div>
-                <div class="sk2-nav-item">Contacts</div>
-                <div class="sk2-nav-item">Automation</div>
+                <div class="sk2-nav-item">Leads</div>
+                <div class="sk2-nav-item">Automations</div>
                 <div class="sk2-nav-item">Reporting</div>
               </div>
             </aside>
-
             <div class="sk2-main">
               <div class="sk2-main-header">
-                <div>
-                  <div class="sk2-main-title">Campaign Overview</div>
-                </div>
+                <div class="sk2-main-title">Campaign Overview</div>
                 <div class="sk2-live"><span class="sk2-live-dot"></span> Ad Live</div>
               </div>
-
               <div class="sk2-kpis">
-                <div class="sk2-kpi">
-                  <div class="sk2-kpi-label">Leads</div>
-                  <div class="sk2-kpi-value">47</div>
-                  <div class="sk2-kpi-trend">+18.2%</div>
-                </div>
-                <div class="sk2-kpi">
-                  <div class="sk2-kpi-label">Bookings</div>
-                  <div class="sk2-kpi-value">19</div>
-                  <div class="sk2-kpi-trend">+9.6%</div>
-                </div>
-                <div class="sk2-kpi">
-                  <div class="sk2-kpi-label">Reach</div>
-                  <div class="sk2-kpi-value">28.4k</div>
-                  <div class="sk2-kpi-trend">+31.4%</div>
-                </div>
-                <div class="sk2-kpi">
-                  <div class="sk2-kpi-label">Cost / Lead</div>
-                  <div class="sk2-kpi-value">$14</div>
-                  <div class="sk2-kpi-trend">Stable</div>
-                </div>
+                <div class="sk2-kpi"><div class="sk2-kpi-label">Leads</div><div class="sk2-kpi-value">47</div><div class="sk2-kpi-trend">+18.2%</div></div>
+                <div class="sk2-kpi"><div class="sk2-kpi-label">Bookings</div><div class="sk2-kpi-value">19</div><div class="sk2-kpi-trend">+9.6%</div></div>
+                <div class="sk2-kpi"><div class="sk2-kpi-label">Reach</div><div class="sk2-kpi-value">28.4k</div><div class="sk2-kpi-trend">+31%</div></div>
+                <div class="sk2-kpi"><div class="sk2-kpi-label">Cost / Lead</div><div class="sk2-kpi-value">$14</div><div class="sk2-kpi-trend">Stable</div></div>
               </div>
-
               <div class="sk2-panels">
                 <div class="sk2-panel">
                   <div class="sk2-panel-title">Performance</div>
@@ -1309,133 +462,113 @@
                 <div class="sk2-panel">
                   <div class="sk2-panel-title">Recent Leads</div>
                   <div class="sk2-leads-list">
-                    <div class="sk2-lead-row">
-                      <div><strong>Interior Detail</strong><span> Orlando, FL </span></div>
-                      <div class="sk2-tag">New</div>
-                    </div>
-                    <div class="sk2-lead-row">
-                      <div><strong>Roof Repair</strong><span> Tampa, FL </span></div>
-                      <div class="sk2-tag">Follow-up</div>
-                    </div>
-                    <div class="sk2-lead-row">
-                      <div><strong>Lawn Cleanup</strong><span> Dallas, TX </span></div>
-                      <div class="sk2-tag">Booked</div>
-                    </div>
+                    <div class="sk2-lead-row"><div><strong>Full Detail — Mike R.</strong><span>Orlando, FL</span></div><div class="sk2-tag">New</div></div>
+                    <div class="sk2-lead-row"><div><strong>Ceramic Coat — James T.</strong><span>Tampa, FL</span></div><div class="sk2-tag">Follow-up</div></div>
+                    <div class="sk2-lead-row"><div><strong>Interior Detail — Sara P.</strong><span>Dallas, TX</span></div><div class="sk2-tag">Booked ✓</div></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="sk2-float-card">
-          <div class="sk2-float-top">
-            <span>Campaign launched</span>
-            <span>Today</span>
-          </div>
+          <div class="sk2-float-top"><span>Campaign launched</span><span>Today</span></div>
           <div class="sk2-float-number">3 clicks</div>
-          <div class="sk2-float-note">Template selected. Location set. Ad live.</div>
+          <div class="sk2-float-note">Template → City → Live ✓</div>
         </div>
       </div>
 
       <div class="sk2-problem-strip sk2-reveal sk2-delay-4">
-        <div class="sk2-problem">
-          <strong>Posting and hoping?</strong>
-          Likes do not mean leads.
-        </div>
-        <div class="sk2-problem">
-          <strong>Referrals too random?</strong>
-          You cannot scale guesswork.
-        </div>
-        <div class="sk2-problem">
-          <strong>Ads too confusing?</strong>
-          That is exactly what this fixes.
-        </div>
+        <div class="sk2-problem"><strong>Relying on referrals?</strong>You can't predict or scale word of mouth.</div>
+        <div class="sk2-problem"><strong>Leads that go cold?</strong>Most detailers never follow up. The system does it for you.</div>
+        <div class="sk2-problem"><strong>Ads feel complicated?</strong>Ours are already built. You just launch them.</div>
       </div>
     </div>
   </section>
 
+  <!-- PROBLEM SECTION -->
   <section class="sk2-section">
     <div class="sk2-wrap">
       <div class="sk2-section-head sk2-reveal">
-        <div class="sk2-label">Why it feels inconsistent</div>
-        <h2 class="sk2-h2">Most businesses do not have an effort problem. They have a system problem.</h2>
-        <p class="sk2-body">You are working. You are posting. You are trying things. But if there is no simple way to launch ads and no follow-up once leads come in, everything feels random.</p>
+        <div class="sk2-label">The real problem</div>
+        <h2 class="sk2-h2">You don't have a hustle problem. You have a system problem.</h2>
+        <p class="sk2-body">You're doing the work. But without a real way to run ads and follow up automatically, growth stays inconsistent no matter how hard you push.</p>
       </div>
-
       <div class="sk2-marquee sk2-reveal sk2-delay-1">
         <div class="sk2-marquee-track">
-          <div class="sk2-marquee-card"><strong>Slow weeks</strong>No consistent flow of fresh leads coming in.</div>
-          <div class="sk2-marquee-card"><strong>Missed follow-up</strong>Someone replies once, then disappears.</div>
-          <div class="sk2-marquee-card"><strong>Too much setup</strong>Ads feel technical and annoying to launch.</div>
-          <div class="sk2-marquee-card"><strong>No clear view</strong>You do not know what is actually working.</div>
-          <div class="sk2-marquee-card"><strong>Agency fatigue</strong>You want control without big retainers.</div>
-          <div class="sk2-marquee-card"><strong>Slow weeks</strong>No consistent flow of fresh leads coming in.</div>
-          <div class="sk2-marquee-card"><strong>Missed follow-up</strong>Someone replies once, then disappears.</div>
-          <div class="sk2-marquee-card"><strong>Too much setup</strong>Ads feel technical and annoying to launch.</div>
-          <div class="sk2-marquee-card"><strong>No clear view</strong>You do not know what is actually working.</div>
-          <div class="sk2-marquee-card"><strong>Agency fatigue</strong>You want control without big retainers.</div>
+          <div class="sk2-marquee-card"><strong>Feast or famine weeks</strong>Busy one week, dead the next — no predictable flow.</div>
+          <div class="sk2-marquee-card"><strong>Leads that ghost</strong>Someone fills out a form, you reply hours later, they've moved on.</div>
+          <div class="sk2-marquee-card"><strong>Ads feel overwhelming</strong>You don't know what to write, design, or spend.</div>
+          <div class="sk2-marquee-card"><strong>No time to follow up</strong>You're detailing cars all day — chasing leads isn't realistic.</div>
+          <div class="sk2-marquee-card"><strong>Agencies cost too much</strong>$1,000+/month for someone else to run ads you don't own.</div>
+          <div class="sk2-marquee-card"><strong>Feast or famine weeks</strong>Busy one week, dead the next — no predictable flow.</div>
+          <div class="sk2-marquee-card"><strong>Leads that ghost</strong>Someone fills out a form, you reply hours later, they've moved on.</div>
+          <div class="sk2-marquee-card"><strong>Ads feel overwhelming</strong>You don't know what to write, design, or spend.</div>
+          <div class="sk2-marquee-card"><strong>No time to follow up</strong>You're detailing cars all day — chasing leads isn't realistic.</div>
+          <div class="sk2-marquee-card"><strong>Agencies cost too much</strong>$1,000+/month for someone else to run ads you don't own.</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- HOW IT WORKS -->
   <section class="sk2-section" id="sk2-how">
     <div class="sk2-wrap">
       <div class="sk2-sticky-wrap">
         <div class="sk2-sticky-card sk2-reveal">
           <div class="sk2-label">How it works</div>
-          <h3>Make it feel easy again.</h3>
-          <p>Instead of building campaigns from scratch, SideKick gives you a faster way to go from idea to live ad with built-in follow-up already connected.</p>
-
+          <h3>From zero to live ad in under a day.</h3>
+          <p>We set up the whole system. You just pick your niche, review everything, and launch. No tech skills. No agency. No guesswork.</p>
           <div class="sk2-stat-list">
-            <div class="sk2-stat-row"><span>Template selected</span><strong>Done</strong></div>
-            <div class="sk2-stat-row"><span>Location chosen</span><strong>Done</strong></div>
-            <div class="sk2-stat-row"><span>Ad launched</span><strong>Same day</strong></div>
-            <div class="sk2-stat-row"><span>Lead follow-up</span><strong>Automatic</strong></div>
+            <div class="sk2-stat-row"><span>Ad template loaded</span><strong>Day 1</strong></div>
+            <div class="sk2-stat-row"><span>Landing page built</span><strong>Day 1–2</strong></div>
+            <div class="sk2-stat-row"><span>Follow-up connected</span><strong>Automatic</strong></div>
+            <div class="sk2-stat-row"><span>First ad live</span><strong>Same week</strong></div>
           </div>
         </div>
 
         <div class="sk2-steps">
           <div class="sk2-step sk2-reveal sk2-delay-1">
             <div class="sk2-step-num">1</div>
-            <h3>Pick a proven template</h3>
-            <p>Choose from prebuilt ad templates made for service businesses. The structure, offer format, and layout are already done for you.</p>
+            <h3>We build your system</h3>
+            <p>Sign up and we set everything up for you in 1–2 days. Landing page, CRM, automations — all configured for car detailers specifically. You don't touch a thing.</p>
             <div class="sk2-step-chips">
-              <span class="sk2-chip">Prebuilt</span>
-              <span class="sk2-chip">Fast setup</span>
-              <span class="sk2-chip">No guesswork</span>
+              <span class="sk2-chip">Done for you</span>
+              <span class="sk2-chip">1–2 day setup</span>
+              <span class="sk2-chip">No tech needed</span>
             </div>
           </div>
 
           <div class="sk2-step sk2-reveal sk2-delay-2">
             <div class="sk2-step-num">2</div>
-            <h3>Choose your location and budget</h3>
-            <p>Set where you want to advertise and how much you want to spend. Keep it simple, local, and controlled.</p>
+            <h3>Pick a prebuilt ad template</h3>
+            <p>Your account comes loaded with proven ad templates built for detailers — the image, the copy, the offer, the guarantee. All done. You just pick one and set your city.</p>
             <div class="sk2-step-chips">
-              <span class="sk2-chip">Local targeting</span>
-              <span class="sk2-chip">Flexible budget</span>
-              <span class="sk2-chip">Easy launch</span>
+              <span class="sk2-chip">Plug-and-play</span>
+              <span class="sk2-chip">Pre-written copy</span>
+              <span class="sk2-chip">Pre-designed creative</span>
             </div>
           </div>
 
           <div class="sk2-step sk2-reveal sk2-delay-3">
             <div class="sk2-step-num">3</div>
-            <h3>Click launch and go live</h3>
-            <p>Your ad can be live the same day instead of sitting unfinished. No long setup process. No agency wait time.</p>
+            <h3>Set your city and launch</h3>
+            <p>Choose your target area, set your daily budget, and hit publish. Your ad goes live the same day. No agency wait time. No approval back-and-forth.</p>
             <div class="sk2-step-chips">
-              <span class="sk2-chip">Same-day live</span>
-              <span class="sk2-chip">No agency needed</span>
+              <span class="sk2-chip">Same-day launch</span>
+              <span class="sk2-chip">Local targeting</span>
+              <span class="sk2-chip">You own everything</span>
             </div>
           </div>
 
           <div class="sk2-step sk2-reveal sk2-delay-4">
             <div class="sk2-step-num">4</div>
-            <h3>Leads get followed up with automatically</h3>
-            <p>When a lead comes in, the system helps make sure they do not sit there getting cold. That means fewer missed opportunities and more actual bookings.</p>
+            <h3>The system follows up for you</h3>
+            <p>The second a lead fills out your form, they get a text back automatically. If they don't book, a 7-day follow-up sequence runs on its own. No chasing. No missed jobs.</p>
             <div class="sk2-step-chips">
-              <span class="sk2-chip">Built-in follow-up</span>
-              <span class="sk2-chip">More conversions</span>
+              <span class="sk2-chip">Instant auto-reply</span>
+              <span class="sk2-chip">7-day follow-up</span>
+              <span class="sk2-chip">Runs 24/7</span>
             </div>
           </div>
         </div>
@@ -1443,75 +576,81 @@
     </div>
   </section>
 
+  <!-- WHAT'S INCLUDED -->
   <section class="sk2-section">
     <div class="sk2-wrap">
       <div class="sk2-section-head sk2-reveal">
-        <div class="sk2-label">Why people actually keep scrolling</div>
-        <h2 class="sk2-h2">Less reading. More movement. More clarity.</h2>
-        <p class="sk2-body">This version is built to feel lighter, cleaner, and more interactive. Short blocks. Animated visuals. Simple sections. Faster understanding.</p>
+        <div class="sk2-label">What's included</div>
+        <h2 class="sk2-h2">Everything connected. Nothing to figure out.</h2>
+        <p class="sk2-body">One system. One price. Every piece already built and wired together for detailers.</p>
       </div>
 
       <div class="sk2-feature-grid">
         <div class="sk2-feature sk2-reveal">
-          <div class="sk2-feature-icon">⚡</div>
-          <h3>Fast launch</h3>
-          <p>Make the value obvious immediately. Click a few buttons, choose your area, and get your ad live without the usual friction.</p>
+          <div class="sk2-feature-icon">🎯</div>
+          <h3>Plug-and-play ad templates</h3>
+          <p>Pre-written, pre-designed Facebook and Instagram ads built specifically for detailers. Image, headline, offer, guarantee — all done. You just set your city and launch.</p>
           <div class="sk2-mini-ui">
+            <div class="sk2-ui-row" style="--w:100%"></div>
             <div class="sk2-ui-row" style="--w:82%"></div>
-            <div class="sk2-ui-row" style="--w:58%"></div>
-            <div class="sk2-ui-row" style="--w:92%"></div>
+            <div class="sk2-ui-row" style="--w:66%"></div>
           </div>
         </div>
 
         <div class="sk2-feature sk2-reveal sk2-delay-1">
-          <div class="sk2-feature-icon">📍</div>
-          <h3>Local targeting</h3>
-          <p>Keep it relevant by letting users picture themselves choosing their city, radius, or area instead of thinking the setup is complicated.</p>
+          <div class="sk2-feature-icon">🔗</div>
+          <h3>Landing page + CRM — connected</h3>
+          <p>Every lead that clicks your ad lands on a pre-built page, fills out a form, and drops straight into your CRM. Organized automatically. Nothing falls through.</p>
           <div class="sk2-mini-ui">
-            <div class="sk2-ui-row" style="--w:64%"></div>
-            <div class="sk2-ui-row" style="--w:86%"></div>
-            <div class="sk2-ui-row" style="--w:42%"></div>
+            <div class="sk2-ui-row" style="--w:90%"></div>
+            <div class="sk2-ui-row" style="--w:74%"></div>
+            <div class="sk2-ui-row" style="--w:58%"></div>
           </div>
         </div>
 
         <div class="sk2-feature sk2-reveal sk2-delay-2">
-          <div class="sk2-feature-icon">🤖</div>
-          <h3>Automatic follow-up</h3>
-          <p>The funnel should not end at the click. Show that the system keeps working after leads come in so they are more likely to become customers.</p>
+          <div class="sk2-feature-icon">⚡</div>
+          <h3>Automated follow-up sequences</h3>
+          <p>Instant reply the second a lead comes in. Then a 7-day follow-up sequence runs automatically if they don't book. Reminders, re-engagement, review requests — all on autopilot.</p>
           <div class="sk2-mini-ui">
-            <div class="sk2-ui-row" style="--w:74%"></div>
-            <div class="sk2-ui-row" style="--w:88%"></div>
-            <div class="sk2-ui-row" style="--w:56%"></div>
+            <div class="sk2-ui-row" style="--w:78%"></div>
+            <div class="sk2-ui-row" style="--w:92%"></div>
+            <div class="sk2-ui-row" style="--w:84%"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="sk2-cta">
     <div class="sk2-wrap">
       <div class="sk2-cta-card sk2-reveal">
-        <div class="sk2-label">Get started</div>
-        <h2 class="sk2-h2">Start simple. Stay in control. Get more leads.</h2>
-        <p class="sk2-body" style="max-width: 700px; margin: 0 auto;">No bloated setup. No agency dependence. Just a cleaner way to launch ads, bring in leads, and keep them warm.</p>
+        <div class="sk2-label">Start today</div>
+        <h2 class="sk2-h2">Your ads are already built.<br>Try the whole system free.</h2>
+        <p class="sk2-body" style="max-width:620px;margin:0 auto;">No agency. No complicated setup. Just a done-for-you marketing system built for detailers — ready to launch in 1–2 days.</p>
 
         <div class="sk2-price-stack">
-          <div class="sk2-price-top">10 days free</div>
+          <div class="sk2-price-top">10-day free trial</div>
           <strong>$39</strong>
-          <div class="sk2-price-bottom">then <span>$39/month</span> locked in</div>
+          <div class="sk2-price-bottom">then <span>$39/month</span> · cancel anytime</div>
         </div>
 
         <div class="sk2-checks">
-          <span class="sk2-check">Prebuilt templates</span>
-          <span class="sk2-check">Same-day launch</span>
-          <span class="sk2-check">Automatic follow-up</span>
-          <span class="sk2-check">No long contracts</span>
+          <span class="sk2-check">✓ Plug-and-play ad templates</span>
+          <span class="sk2-check">✓ Done-for-you setup</span>
+          <span class="sk2-check">✓ Landing page included</span>
+          <span class="sk2-check">✓ Automated follow-up</span>
+          <span class="sk2-check">✓ Full CRM</span>
+          <span class="sk2-check">✓ No long contracts</span>
         </div>
 
         <div class="sk2-hero-actions" style="margin-top:0;">
-          <a class="sk2-btn sk2-btn-primary" href="https://www.sidekickstudioss.com/pricing">Start Free — 10 Days On Us</a>
+          <a class="sk2-btn sk2-btn-primary" href="https://www.sidekickstudioss.com/pricing">Start Free Trial →</a>
           <a class="sk2-btn sk2-btn-secondary" href="https://www.sidekickstudioss.com/">Visit Website</a>
         </div>
+
+        <p style="margin-top:16px;font-size:12px;color:rgba(245,247,255,0.35);">Credit card required · Cancel anytime · contact@sidekickstudioss.net</p>
       </div>
     </div>
   </section>
@@ -1519,30 +658,21 @@
 
 <script>
 (function () {
-  const items = document.querySelectorAll('#sk2-funnel .sk2-reveal');
-
+  var items = document.querySelectorAll('#sk2-funnel .sk2-reveal');
   if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('sk2-visible');
-          io.unobserve(entry.target);
-        }
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('sk2-visible'); io.unobserve(entry.target); }
       });
-    }, { threshold: 0.14 });
-
-    items.forEach((item) => io.observe(item));
+    }, { threshold: 0.12 });
+    items.forEach(function(item) { io.observe(item); });
   } else {
-    items.forEach((item) => item.classList.add('sk2-visible'));
+    items.forEach(function(item) { item.classList.add('sk2-visible'); });
   }
-
-  document.querySelectorAll('#sk2-funnel a[href^="#"]').forEach((link) => {
-    link.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+  document.querySelectorAll('#sk2-funnel a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
 })();
