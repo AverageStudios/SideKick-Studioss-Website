@@ -45,6 +45,7 @@
   }
   .sk2-glow::before { background: var(--sk2-purple); top: -120px; left: -140px; }
   .sk2-glow::after { background: #4f46e5; right: -140px; top: 220px; }
+
   .sk2-badge {
     display: inline-flex; align-items: center; gap: 10px;
     padding: 8px 14px; border-radius: 999px;
@@ -61,6 +62,7 @@
     70% { box-shadow: 0 0 0 12px rgba(167,139,250,0); }
     100% { box-shadow: 0 0 0 0 rgba(167,139,250,0); }
   }
+
   .sk2-title {
     font-size: clamp(40px, 7vw, 72px); line-height: 0.98;
     letter-spacing: -0.05em; margin: 18px 0 18px; font-weight: 900;
@@ -73,7 +75,9 @@
     max-width: 680px; margin: 0 auto;
     font-size: clamp(16px, 2vw, 19px); line-height: 1.65; color: var(--sk2-text-soft);
   }
+
   .sk2-hero { padding: 110px 0 72px; }
+
   .sk2-trial-banner {
     display: inline-flex; align-items: center; gap: 10px; margin-top: 24px;
     padding: 10px 16px; border-radius: 999px;
@@ -82,6 +86,7 @@
     flex-wrap: wrap; justify-content: center;
   }
   .sk2-trial-banner strong { color: #ffffff; }
+
   .sk2-hero-actions {
     display: flex; justify-content: center; gap: 14px;
     flex-wrap: wrap; margin-top: 34px;
@@ -105,6 +110,7 @@
     border: 1px solid rgba(255,255,255,0.14); backdrop-filter: blur(12px);
   }
   .sk2-btn-secondary:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.28); background: rgba(255,255,255,0.09); }
+
   .sk2-mini-proof {
     display: flex; justify-content: center; flex-wrap: wrap;
     gap: 10px; margin-top: 18px; color: var(--sk2-text-faint); font-size: 13px;
@@ -113,6 +119,7 @@
     padding: 9px 13px; border-radius: 999px;
     background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
   }
+
   .sk2-hero-visual { margin-top: 52px; position: relative; }
   .sk2-browser {
     position: relative; border-radius: 28px; overflow: hidden;
@@ -149,6 +156,7 @@
     background: linear-gradient(135deg, rgba(139,92,246,0.26), rgba(124,58,237,0.14));
     border-color: rgba(167,139,250,0.25);
   }
+
   .sk2-main { padding: 24px; }
   .sk2-main-header {
     display: flex; align-items: center; justify-content: space-between;
@@ -162,14 +170,17 @@
   }
   .sk2-live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sk2-green); animation: sk2Blink 1.4s infinite; }
   @keyframes sk2Blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+
   .sk2-kpis { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; margin-bottom: 16px; }
   .sk2-kpi { padding: 16px; border-radius: 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
   .sk2-kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: var(--sk2-text-faint); margin-bottom: 8px; }
   .sk2-kpi-value { font-size: 24px; font-weight: 800; letter-spacing: -0.04em; }
   .sk2-kpi-trend { margin-top: 8px; color: #9df2b2; font-size: 12px; font-weight: 700; }
+
   .sk2-panels { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; }
   .sk2-panel { border-radius: 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 18px; }
   .sk2-panel-title { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--sk2-text-faint); margin-bottom: 16px; font-weight: 700; }
+
   .sk2-bars { height: 180px; display: flex; align-items: end; gap: 10px; }
   .sk2-bar {
     flex: 1; border-radius: 12px 12px 6px 6px;
@@ -182,6 +193,7 @@
   .sk2-bar:nth-child(6){animation-delay:.30s} .sk2-bar:nth-child(7){animation-delay:.36s}
   .sk2-bar:nth-child(8){animation-delay:.42s}
   @keyframes sk2Rise { from{transform:scaleY(.15);opacity:.25} to{transform:scaleY(1);opacity:.92} }
+
   .sk2-leads-list { display: grid; gap: 12px; }
   .sk2-lead-row {
     display: flex; justify-content: space-between; align-items: center;
@@ -195,6 +207,7 @@
     background: rgba(139,92,246,0.14); color: #d7c8ff;
     border: 1px solid rgba(167,139,250,0.18); white-space: nowrap;
   }
+
   .sk2-float-card {
     position: absolute; right: -18px; bottom: 26px; width: 220px;
     padding: 16px; border-radius: 18px; background: rgba(12,12,21,0.84);
@@ -205,6 +218,7 @@
   .sk2-float-top { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 10px; font-size: 12px; color: var(--sk2-text-soft); }
   .sk2-float-number { font-size: 28px; font-weight: 900; letter-spacing: -.05em; }
   .sk2-float-note { color: #9df2b2; font-size: 12px; font-weight: 700; }
+
   .sk2-problem-strip { margin-top: 28px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
   .sk2-problem {
     padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.04);
@@ -212,10 +226,12 @@
     font-size: 14px; text-align: left;
   }
   .sk2-problem strong { display: block; color: white; margin-bottom: 6px; font-size: 15px; }
+
   .sk2-section-head { max-width: 760px; margin: 0 auto 40px; text-align: center; }
   .sk2-label { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--sk2-purple-3); font-weight: 800; margin-bottom: 12px; }
   .sk2-h2 { font-size: clamp(30px,4vw,52px); line-height: 1.05; letter-spacing: -0.045em; margin: 0 0 14px; font-weight: 900; }
   .sk2-body { color: var(--sk2-text-soft); font-size: 17px; line-height: 1.65; }
+
   .sk2-sticky-wrap { display: grid; grid-template-columns: .95fr 1.05fr; gap: 24px; align-items: start; }
   .sk2-sticky-card {
     position: sticky; top: 30px; padding: 28px; border-radius: 28px;
@@ -232,6 +248,7 @@
     color: var(--sk2-text-soft); font-size: 14px;
   }
   .sk2-stat-row strong { color: #fff; }
+
   .sk2-steps { display: grid; gap: 18px; }
   .sk2-step {
     position: relative; padding: 22px 22px 22px 88px; border-radius: 24px;
@@ -258,6 +275,7 @@
     background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
     color: #ddd6fe; font-size: 12px; font-weight: 700;
   }
+
   .sk2-feature-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
   .sk2-feature {
     padding: 24px; border-radius: 24px; background: rgba(255,255,255,0.05);
@@ -284,6 +302,7 @@
     border-radius: inherit;
     background: linear-gradient(90deg,rgba(196,181,253,.9),rgba(139,92,246,.9));
   }
+
   .sk2-marquee { display: flex; gap: 14px; overflow: hidden; mask-image: linear-gradient(90deg,transparent,#fff 10%,#fff 90%,transparent); }
   .sk2-marquee-track { display: flex; gap: 14px; min-width: max-content; animation: sk2Scroll 24s linear infinite; }
   @keyframes sk2Scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
@@ -293,6 +312,7 @@
     color: var(--sk2-text-soft); font-size: 14px; line-height: 1.55;
   }
   .sk2-marquee-card strong { display: block; color: white; margin-bottom: 6px; font-size: 15px; }
+
   .sk2-cta { padding: 90px 0 110px; }
   .sk2-cta-card {
     position: relative; overflow: hidden; padding: 52px 48px; border-radius: 34px; text-align: center;
@@ -306,12 +326,14 @@
   .sk2-price-top { color: #b7f7ca; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .10em; }
   .sk2-price-bottom { color: var(--sk2-text-soft); font-size: 17px; font-weight: 600; }
   .sk2-price-bottom span { color: #fff; font-weight: 700; }
+
   .sk2-checks { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0 30px; }
   .sk2-check {
     padding: 10px 14px; border-radius: 999px;
     background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10);
     color: var(--sk2-text-soft); font-size: 13px; font-weight: 600;
   }
+
   .sk2-reveal { opacity:0; transform:translateY(28px) scale(.98); transition:opacity .7s ease,transform .7s ease; will-change:transform,opacity; }
   .sk2-reveal.sk2-visible { opacity:1; transform:translateY(0) scale(1); }
   .sk2-delay-1{transition-delay:.08s} .sk2-delay-2{transition-delay:.16s}
@@ -373,6 +395,7 @@
     .sk2-btn{font-size:14px}
   }
 </style>
+
 <div class="sk2-root" id="sk2-funnel">
   <div class="sk2-glow"></div>
 
@@ -400,7 +423,7 @@
       </div>
 
       <div class="sk2-hero-actions sk2-reveal sk2-delay-3">
-        <a class="sk2-btn sk2-btn-primary" href="https://www.sidekickstudioss.com/pricing">Start Free Trial — 10 Days On Us</a>
+        <a class="sk2-btn sk2-btn-primary" href="https://www.sidekickstudioss.com/pricing" onclick="fbq('track', 'Lead');">Start Free Trial — 10 Days On Us</a>
         <a class="sk2-btn sk2-btn-secondary" href="#sk2-how">See How It Works</a>
       </div>
 
@@ -517,24 +540,24 @@
       <div class="sk2-sticky-wrap">
         <div class="sk2-sticky-card sk2-reveal">
           <div class="sk2-label">How it works</div>
-          <h3>From zero to live ad in under a day.</h3>
-          <p>We set up the whole system. You just pick your niche, review everything, and launch. No tech skills. No agency. No guesswork.</p>
+          <h3>From zero to live ad without the usual hassle.</h3>
+          <p>Everything is already structured for you. Pick the template you want, choose your city, launch your campaign, and let the follow-up run automatically.</p>
           <div class="sk2-stat-list">
-            <div class="sk2-stat-row"><span>Ad template loaded</span><strong>Day 1</strong></div>
-            <div class="sk2-stat-row"><span>Landing page built</span><strong>Day 1–2</strong></div>
+            <div class="sk2-stat-row"><span>Ad template loaded</span><strong>Included</strong></div>
+            <div class="sk2-stat-row"><span>Landing page ready</span><strong>Included</strong></div>
             <div class="sk2-stat-row"><span>Follow-up connected</span><strong>Automatic</strong></div>
-            <div class="sk2-stat-row"><span>First ad live</span><strong>Same week</strong></div>
+            <div class="sk2-stat-row"><span>First ad live</span><strong>Same day</strong></div>
           </div>
         </div>
 
         <div class="sk2-steps">
           <div class="sk2-step sk2-reveal sk2-delay-1">
             <div class="sk2-step-num">1</div>
-            <h3>We build your system</h3>
-            <p>Sign up and we set everything up for you in 1–2 days. Landing page, CRM, automations — all configured for car detailers specifically. You don't touch a thing.</p>
+            <h3>Get instant access to the system</h3>
+            <p>Your account comes with the core pieces already set up for detailers — landing page, CRM, and automations — so you can get moving without a long setup process.</p>
             <div class="sk2-step-chips">
               <span class="sk2-chip">Done for you</span>
-              <span class="sk2-chip">1–2 day setup</span>
+              <span class="sk2-chip">Ready fast</span>
               <span class="sk2-chip">No tech needed</span>
             </div>
           </div>
@@ -628,7 +651,7 @@
       <div class="sk2-cta-card sk2-reveal">
         <div class="sk2-label">Start today</div>
         <h2 class="sk2-h2">Your ads are already built.<br>Try the whole system free.</h2>
-        <p class="sk2-body" style="max-width:620px;margin:0 auto;">No agency. No complicated setup. Just a done-for-you marketing system built for detailers — ready to launch in 1–2 days.</p>
+        <p class="sk2-body" style="max-width:620px;margin:0 auto;">No agency. No complicated setup. Just a done-for-you marketing system built for detailers — ready to use and ready to launch.</p>
 
         <div class="sk2-price-stack">
           <div class="sk2-price-top">10-day free trial</div>
@@ -646,7 +669,7 @@
         </div>
 
         <div class="sk2-hero-actions" style="margin-top:0;">
-          <a class="sk2-btn sk2-btn-primary" href="https://www.sidekickstudioss.com/pricing">Start Free Trial →</a>
+          <a class="sk2-btn sk2-btn-primary" href="https://www.sidekickstudioss.com/pricing" onclick="fbq('track', 'Lead');">Start Free Trial →</a>
           <a class="sk2-btn sk2-btn-secondary" href="https://www.sidekickstudioss.com/">Visit Website</a>
         </div>
 
@@ -656,23 +679,48 @@
   </section>
 </div>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2250517789086791');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2250517789086791&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <script>
 (function () {
   var items = document.querySelectorAll('#sk2-funnel .sk2-reveal');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
-        if (entry.isIntersecting) { entry.target.classList.add('sk2-visible'); io.unobserve(entry.target); }
+        if (entry.isIntersecting) {
+          entry.target.classList.add('sk2-visible');
+          io.unobserve(entry.target);
+        }
       });
     }, { threshold: 0.12 });
     items.forEach(function(item) { io.observe(item); });
   } else {
     items.forEach(function(item) { item.classList.add('sk2-visible'); });
   }
+
   document.querySelectorAll('#sk2-funnel a[href^="#"]').forEach(function(link) {
     link.addEventListener('click', function(e) {
       var target = document.querySelector(this.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 })();
